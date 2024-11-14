@@ -1,0 +1,361 @@
+% Copyright 2004 by Till Tantau <tantau@users.sourceforge.net>.
+%
+% In principle, this file can be redistributed and/or modified under
+% the terms of the GNU Public License, version 2.
+%
+% However, this file is supposed to be a template to be modified
+% for your own needs. For this reason, if you use this file as a
+% template and not specifically distribute it as part of a another
+% package/program, I grant the extra permission to freely copy and
+% modify this file as you see fit and even to delete this copyright
+% notice. 
+
+\documentclass{beamer}
+
+% There are many different themes available for Beamer. A comprehensive
+% list with examples is given here:
+% http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
+% You can uncomment the themes below if you would like to use a different
+% one:
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{boxes}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+\usetheme{default}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+\newenvironment{trienv}{\only{\setbeamertemplate{items}[triangle]}}{}
+\usepackage{wrapfig}
+\usepackage{multimedia}
+\usepackage{multirow}
+\usepackage[round]{natbib}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{graphicx} 
+\usepackage{tikz}
+\usepackage{bibentry}
+\useoutertheme{miniframes}
+\setbeamercolor{frametitle}{fg = black}
+\setbeamercolor{title}{fg = black}
+\defbeamertemplate{itemize item}{mybullet}{\large\raise1pt\hbox{\textbullet}}
+\setbeamertemplate{itemize item}[mybullet]
+\setbeamertemplate{navigation symbols}{}
+%\bibliographystyle{apsr_fs} 
+    \defbeamertemplate*{footline}{my infolines theme}
+    {
+       \leavevmode%
+       \hbox{%
+       \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+         \usebeamerfont{author in head/foot}\insertshortauthor~~\insertshortinstitute
+       \end{beamercolorbox}%
+       \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+         \usebeamerfont{title in head/foot}\insertshorttitle
+       \end{beamercolorbox}%
+       \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+         \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+         \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+       \end{beamercolorbox}}%
+       \vskip0pt%
+    }
+\setbeamerfont{frametitle}{size=\small}
+\title[]{\textbf{\Large{
+Научный Подход в Современных Социальных Науках.}}}
+\author[]{%
+  \texorpdfstring{%
+    \begin{columns}
+      \column{.3333\linewidth}
+      \centering
+      \large{}
+      \column{.40\linewidth}
+      \centering
+      \large{Евгений Седашов, PhD} \\
+      \small{esedashov@hse.ru}
+      \column{.3333\linewidth}
+      \centering
+      \large{}
+    \end{columns}
+ }
+ {Author 1, Author 2, Author 3}
+}
+
+
+% - Give the names in the same order as the appear in the paper.
+% - Use the \inst{?} command only if the authors have different
+%   affiliation.
+
+
+% - Use the \inst command only if there are several affiliations.
+% - Keep it simple, no one is interested in your street address.
+
+\date{6/11/2024}
+% - Either use conference name or its abbreviation.
+% - Not really informative to the audience, more for people (including
+%   yourself) who are reading the slides online
+
+\subject{}
+\usecolortheme{default}
+% This is only inserted into the PDF information catalog. Can be left
+% out. 
+
+% If you have a file called "university-logo-filename.xxx", where xxx
+% is a graphic format that can be processed by latex or pdflatex,
+% resp., then you can add a logo as follows:
+
+% \pgfdeclareimage[height=0.5cm]{university-logo}{university-logo-filename}
+% \logo{\pgfuseimage{university-logo}}
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+\begin{document} 
+\makeatletter
+\let\beamer@old@writeslidentry\beamer@writeslidentry
+\newcommand\bulletoff{\let\beamer@writeslidentry\relax}
+\newcommand\bulleton{\let\beamer@writeslidentry\beamer@old@writeslidentry}
+%------------------------------------------------
+\large
+\setbeamercovered{transparent}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}
+  \includegraphics[scale=1]{qrcode.png}
+\end{frame}
+% Section and subsections will appear in the presentation overview
+% and table of contents.
+\section{Введение}
+\begin{frame}{Цели Курса}
+\begin{itemize}
+	\setlength\itemsep{2em}
+	\item Данный курс можно рассматривать как введение в методологию современных социально-научных исследований.
+	\item Первая цель -- понять,  как мы можем получить научные результаты,  опираясь на анализ данных. 
+	\item Вторая цель -- облегчить выполнение курсовой работы. 
+\end{itemize}
+\end{frame}
+\begin{frame}{Оценивание}
+\begin{itemize}
+	\setlength\itemsep{2em}
+	\item Домашние задания -- 40 процентов.
+	\item Посещение и активность -- 20 процентов.
+	\item Финальный текст -- 40 процентов. 
+\end{itemize}
+\end{frame}
+\section{Научный Подход}
+\begin{frame}{Научный Подход vs.  Здравый Смысл}
+\begin{itemize}
+	\setlength\itemsep{2em}
+	\item Наука, в наиболее общем смысле, ставит целью получение знаний об окружающем нас мире. 
+	\item Наука -- лишь один из способов получения подобных знаний.
+	\item Другие способы -- игра,  метод проб и ошибок,  здравый смысл (часто основанный на опыте). 
+	\item В чём заключаются отличительные особенности  научного подхода? 
+\end{itemize}
+\end{frame}
+\begin{frame}{Принципы Научного Подхода}
+\begin{itemize}
+	\setlength\itemsep{2em}
+	\item Научные исследования опираются на системные теории,  описывающие те или иные аспекты окружающего мира.
+	\item Научные исследования подвергают теории тщательной эмпирической проверке.  
+	\item Цель научных исследований -- в выявлении взаимосвязей между переменными. 
+	\item Эмпирическая тестируемость выдвигаемых предположений (критерий фальсификации).
+\end{itemize}
+\end{frame}
+\begin{frame}{Критерий Фальсификации I}
+\begin{itemize}
+	\setlength\itemsep{2em}
+	\item Фальсифицируемость выдвигаемых предположений означает принципальную возможность их эмпирического опровержения. 
+	\item \textbf{Пример 1}.  Положительное подкрепление в процессе обучения ведёт к более высоким результатам контрольных работ,  чем отрицательное подкрепление.  
+	\item \textbf{Пример 2}.  Люди с более высоким уровнем образования и дохода чаще приходят на выборы.  
+\end{itemize}
+\end{frame}
+\begin{frame}{Критерий Фальсификации II}
+\begin{itemize}
+	\setlength\itemsep{2em}
+	\item \textbf{Пример 3}.  Футболисты,  имевшие опыт жизни в странах с активными гражданскими конфликтами,  будут более склонны к агрессивной игре. 
+	\item \textbf{Пример 4}.  Земля -- единственная планета с разумной формой жизни.
+	\item Все 4 примера описывают утверждения,  которые можно эмпирически опровергнуть. 
+	\item Ваши примеры? 
+\end{itemize}
+\end{frame}
+\begin{frame}{Границы Научного Метода}
+\begin{itemize}
+	\setlength\itemsep{2em}
+	\item \textbf{Ловушка Тавтологии} -- тавтологические утверждения не являются научными (они верны по определению).  
+	\item \textbf{Ненаблюдаемые явления} -- противоречат критерию фальсификации и поэтому лежат за рамками научного метода. 
+\end{itemize}
+\end{frame}
+\begin{frame}{Четыре Метода Познания I}
+\begin{itemize}
+	\setlength\itemsep{2em}
+	\item Чарльз Пирс определяет четыре метода познания.
+	\item Метод упорства -- человек твёрдо верит в определённые факты,  потому что  ``это так работает'', ``так было всегда'',  ``у меня опыт''.  Факты,  противоречащие устоявшейся картине мира,  отбрасываются как ненужные. 
+	\item Метод авторитета -- источником знаний является авторитет в той или иной форме.  Советы доктора или юриста относятся к данному методу,  как и любое доверие к экспертной точке зрения (``доверяю,  потому что он специалист''). 
+\end{itemize}
+\end{frame}
+\begin{frame}{Четыре Метода Познания II}
+\begin{itemize}
+	\setlength\itemsep{2em}
+	\item Метод а-приори -- знание,  условно известное заранее,  до получения практического опыта. 
+	\item Научный метод -- метод получения знаний о мире,  идеалом которого является объективность и реплицируемость; любой исследователь,  имея на руках одни и те же вводные,  должен получить одни и те же результаты.  
+	\item Реплицируемость $\neq$ детерминированность! 
+\end{itemize}
+\end{frame}
+\section{Проблемы и Гипотезы}
+\begin{frame}{Проблема Исследования}
+\begin{itemize}
+	\setlength\itemsep{2em}
+	\item Любое исследование начинается с постановки научной проблемы; другим названием также является исследовательский вопрос.
+	\item Формулировка проблемы для прикладных проектов имеет свою специфику; например,  проблемой может быть отсутствие системы навигации для маломобильных граждан (а целью -- создание такой системы). 
+	\item Единого рецепта формулировки научной проблемы нет,  но есть общие гайдлайны,  которыми можно руководствоваться. 
+\end{itemize}
+\end{frame}
+\begin{frame}{Примеры I}
+\begin{itemize}
+	\setlength\itemsep{2em}
+	\item Как экономическое неравенство связано с политическими транзитами? 
+	\item Как разные типы стимулирования учеников влияют на образовательные результаты? 
+	\item Как звуковая среда влияет на восприятие визуальной информации? 
+\end{itemize}
+\end{frame}
+\begin{frame}{Примеры II}
+\begin{itemize}
+	\setlength\itemsep{1em}
+	\item Как личностные особенности лидеров влияют на конфликты между странами? 
+	\item Как фрустрация влияет на уровень агрессии? 
+	\item Влияет ли расовая принадлежность подозреваемого на вероятность обвинительного приговора в суде? 
+	\item В качестве проблемы,  таким образом,  обычно выступает вопрос:  ``Как связаны две (или более) переменные?''
+	\item Исключение -- таксономические исследования,  ставящие целью разработку классификации,  и методологические исследования.
+\end{itemize}
+\end{frame}
+\begin{frame}{Критерии Качественной Формулировки Проблемы}
+\begin{itemize}
+	\setlength\itemsep{2em}
+	\item В формулировке всегда должно быть указание на взаимосвязь между переменными. 
+	\item Сформулируйте вопрос,  как в примерах выше.
+	\item Возможность эмпирической проверки. 
+\end{itemize}
+\end{frame}
+\begin{frame}{Гипотезы}
+\begin{itemize}
+	\setlength\itemsep{1em}
+	\item Гипотезы являются эмпирически проверяемыми утверждениями о связи между переменными. 
+	\item Гипотезы не возникают ``из воздуха'' -- за ними обычно стоят серьёзные теоретические конструкции. 
+	\item Принципиальное отличие гипотезы от проблемы -- в гипотезах есть указание на \textbf{направление} связи,  в то время как в проблеме есть только указание на \textbf{возможное наличие} связи. 
+\end{itemize}
+\end{frame}
+\begin{frame}{Критерии Хорошей Гипотезы I}
+\begin{itemize}
+	\setlength\itemsep{3em}
+	\item Указание на направление связи между переменными.
+	\item Явные эмпирически проверяемые следствия. 
+	\item Использование дескриптивного (``увеличивает'',  ``уменьшает'') вместо нормативного (``улучшает'',  ``ухудшает'') языка. 
+\end{itemize}
+\end{frame}
+\begin{frame}{Критерии Хорошей Гипотезы II}
+\begin{itemize}
+	\setlength\itemsep{3em}
+	\item Насколько обобщённой должна быть гипотеза? 
+	\item Размер букв увеличивает скорость чтения -- слишком общо. 
+	\item Размер шрифта Helvetica увеличивает скорость чтения и количество запоминаемой информации -- в самый раз. 
+\end{itemize}
+\end{frame}
+\begin{frame}{Пример Гипотез}
+\begin{itemize}
+	\setlength\itemsep{3em}
+	\item Уровень шума или музыки ухудшает качестве визуального восприятия. 
+	\item Неравенство влияет на переход от недемократических к демократическим режимам в форме параболы с ветвями вниз (inversed U-shaped). 
+	\item Количество участвующих повстанческих группировок увеличивает ожидаемую продолжительность гражданских войн. 
+\end{itemize}
+\end{frame}
+\begin{frame}{Откуда Берутся Гипотезы?}
+\begin{itemize}
+	\setlength\itemsep{1em}
+	\item Применить существующую теоретическую модель к вопросу,  который ранее не анализировался с её помощью. 
+	\item Модифицировать теорию,  которая оказалась ложной. 
+	\item Придумать новую теорию. 
+\end{itemize}
+\end{frame}
+\begin{frame}{Пример Модификации Теории I}
+\begin{itemize}
+	\setlength\itemsep{1em}
+	\item Рассмотрим известную модель голосования Даунса.
+	\item Даунс (1957) предложил простую модель голосования: $U(V)=P\cdot B - C$.  Правило принятия решения следующее: голосуй, если $U(V) \geqslant 0$, в противном случае оставайся дома; $P$ --вероятность повлиять на исход выборов -- практически всегда очень маленькая,  поэтому парадоксальным образом данная модель предсказывает нулевую явку. 
+	\item Возможное решение -- добавить в модель гражданский долг: $U(V)=P\cdot B - C + D$ (модель Райкера-Ордешока). 
+\end{itemize}
+\end{frame}
+\begin{frame}{Задание}
+\begin{itemize}
+	\setlength\itemsep{1em}
+	\item Какие переменные могут влиять на академические достижения школьников? Сформулируйте теорию и тестируемые гипотезы. 
+	\item Какие переменные могут влиять на отношение к трудовым мигрантам? Сформулируйте теорию и тестируемые гипотезы. 
+\end{itemize}
+\end{frame}
+\section{Конструкты и Операционализация}
+\begin{frame}{Концепты и Конструкты}
+\begin{itemize}
+	\setlength\itemsep{1em}
+	\item Концепт -- абстрактное понятие,  обозначающее класс схожих по характеристикам феноменов-объектов.
+	\item Вес,  масса,  энергия,  сила,  эмоция,  политический режим -- всё это примеры концептов. 
+	 \item Конструкт -- это тип концепта,  специально созданный для научных целей.
+\end{itemize}
+\end{frame}
+\begin{frame}{Характеристики Конструктов}
+\begin{itemize}
+	\setlength\itemsep{1em}
+	\item Конструкты участвуют в построении теорий.
+	\item Конструкты определяются таким образом,  чтобы их можно было наблюдать и измерять; концепты, в отличие от конструктов,  не обязательно являются измеряемыми понятиями. 
+\end{itemize}
+\end{frame}
+\begin{frame}{Переменные}
+\begin{itemize}
+	\setlength\itemsep{1em}
+	\item Переменная -- это измеряемая величина,  созданная с целью проверки конкретной гипотезы. 
+	\item Примеры переменных: пол,  возраст,  доход,  уровень образования,  балл на образовательном тесте,  визуальное восприятие, эмоциональное состояние. 
+	\item С математической точки зрения, мы, как правило, имеем дело с бинарными,  категориальными или непрерывными переменными. 
+\end{itemize}
+\end{frame}
+\begin{frame}{Определения Конструктов и Переменных}
+\begin{itemize}
+	\setlength\itemsep{2em}
+	\item Содержательное определение конструкта -- это определение,  использующее другие конструкты. 
+	\item Операционное определение конструкта -- это определение,  задающее параметры его измерения. 
+	\item Операционное определение интеллекта -- балл, набранный в специально разработанном тесте.
+	\item Операционное определение неравенства -- разница между 10 процентами самых богатых и 10 процентами самых бедных.
+\end{itemize}
+\end{frame}
+\begin{frame}{Типы Операционных Определений}
+\begin{itemize}
+	\setlength\itemsep{2em}
+	\item Измеряемое определение -- описывает,  как будет измеряться конкретная переменная; пример -- отношение к трудовым мигрантам можно измерять вопросом  ``Как бы Вы отнеслись к факту соседства с Вами семьи мигрантов? Оцените Ваше отношение по 5 балльной шкале, где 1 -- определённо отрицательно,  5 -- определённо положительно''.  
+	\item Экспериментальное определение -- описывает то,  как исследователь может манипулировать значениями переменной в контролируемой форме.  
+\end{itemize}
+\end{frame}
+\begin{frame}{Задание -- Операционные Определения}
+\begin{itemize}
+	\setlength\itemsep{2em}
+	\item Лидерство.
+	\item Популярность.
+	\item Дискриминация. 
+	\item Политическая идеология. 
+	\item Переменные из ваших курсовых. 
+\end{itemize}
+\end{frame}
+\end{document}
