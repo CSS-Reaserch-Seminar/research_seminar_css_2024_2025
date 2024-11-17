@@ -53,7 +53,7 @@
   ```
 - Вставьте следующую команду для клонирования репозитория
    ```bash
-   git clone https://github.com/goffkiril/research_seminar_css_2024_2025.git
+   git clone git@github.com:CSS-Reaserch-Seminar/research_seminar_css_2024_2025.git
    ```
 - После выполнения команды на вашем компьютере появится папка с репозиторием, содержащая все материалы курса.
 
